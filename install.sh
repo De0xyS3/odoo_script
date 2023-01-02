@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# URL de la lista blanca de IPs
 whitelist_url="https://raw.githubusercontent.com/user/repo/master/whitelist.txt"
-
-# Obtener la IP del usuario
 user_ip=$(curl -s "https://api.ipify.org")
-
-# Descargar la lista blanca de IPs y buscar la IP del usuario
 if curl -s "$whitelist_url" | grep -q "$user_ip"; then
   
 # Pedir al usuario que ingrese el dominio que desea utilizar para su instalación de Odoo
