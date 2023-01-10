@@ -1,6 +1,6 @@
 #!/bin/bash
 
-whitelist_url="https://raw.githubusercontent.com/hhportugames/odoo_script/main/whitelist.txt"
+whitelist_url="https://raw.githubusercontent.com/De0xyS3/odoo_script/main/whitelist.txt"
 user_ip=$(curl -s "https://api.ipify.org")
 if curl -s "$whitelist_url" | grep -q "$user_ip"; then
   
