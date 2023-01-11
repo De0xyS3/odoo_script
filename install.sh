@@ -1,8 +1,8 @@
 #!/bin/bash
 
-whitelist_url="https://raw.githubusercontent.com/De0xyS3/odoo_script/main/whitelist.txt"
-user_ip=$(curl -s "https://api.ipify.org")
-if curl -s "$whitelist_url" | grep -q "$user_ip"; then
+#whitelist_url="https://raw.githubusercontent.com/De0xyS3/odoo_script/main/whitelist.txt"
+#user_ip=$(curl -s "https://api.ipify.org")
+#if curl -s "$whitelist_url" | grep -q "$user_ip"; then
   
 # Pedir al usuario que ingrese el dominio que desea utilizar para su instalación de Odoo
 read -p "Ingresa el dominio que deseas utilizar para tu instalación de Odoo: " domain
@@ -163,8 +163,8 @@ systemctl restart nginx
 # Configurar el servicio de Odoo para iniciarse automáticamente al iniciar el sistema
 sudo systemctl enable odoo$odoo_version
 sudo service odoo$odoo_version start
-else
-
-  echo "Tu IP no está en la lista blanca de IPs permitidas para descargar el archivo"
-fi
-exit
+#else
+#
+#  echo "Tu IP no está en la lista blanca de IPs permitidas para descargar el archivo"
+#fi
+#exit
